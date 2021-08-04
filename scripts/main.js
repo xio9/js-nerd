@@ -26,7 +26,7 @@ let amount2 = prompt("Во сколько это обойдется?");
 
 let accumulatedMonth = getAccumulatedMonth();
 
-budgetDay = accumulatedMonth / 30;
+let budgetDay = accumulatedMonth / 30;
 
 function getAccumulatedMonth() {
    return money - getExpensesMonth();

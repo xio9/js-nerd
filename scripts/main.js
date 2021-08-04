@@ -1,12 +1,12 @@
 'use strict';
 
-let money = 0;
+let money = prompt("Ваш месячный доход?", 5000);
 let income = 'Freelance';
 let addExpenses  = 'taxi, football, beer';
 let deposit = true;
 let mission = 1000;
 let period = 6;
-let budgetDay = money / 30;
+
 
 let showTypeOf = function(data) {
   console.log(data, typeof(data));
@@ -17,7 +17,6 @@ showTypeOf(income);
 showTypeOf(deposit);
 
 
-money = prompt("Ваш месячный доход?");
 addExpenses += prompt("Перечислите возможные расходы за рассчитываемый период через запятую");
 deposit = confirm("Есть ли у вас депозит в банке");
 let expenses1 = prompt("Введите обязательную статью расходов №1");
@@ -30,7 +29,7 @@ let accumulatedMonth = getAccumulatedMonth();
 budgetDay = accumulatedMonth / 30;
 
 function getAccumulatedMonth() {
-   return money - amount1 - amount2;
+   return money - getExpensesMonth();
 }
 
 function getExpensesMonth() {
@@ -44,7 +43,7 @@ function getTargetMonth() {
 console.log("getExpensesMonth: ", getExpensesMonth());
 console.log("budgetDay: ", budgetDay);
 
-console.log("addExpenses: ", addExpenses);
+console.log("addExpenses: ", addExpenses.toLoweCase().split(','));
 
 console.log(`Цель по бабкам будет достигнута через столько то месяцев: ${getTargetMonth()}`);
 

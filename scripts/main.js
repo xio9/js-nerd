@@ -1,5 +1,23 @@
 'use strict';
 
+const calc = document.getElementById('start');
+const plus = document.getElementsByTagName('btn_plus');
+const check = document.querySelector('#deposit-check');
+const incomeItem = document.querySelectorAll('.additional_income-item');
+const bdgtMonth = document.getElementsByClassName('budget_month-value');
+const bdgtDay = document.getElementsByClassName('budget_day-value');
+const expMonth = document.getElementsByClassName('expenses_month-value');
+const addIncome = document.getElementById('additional_income-value');
+const addExp = document.getElementById('result-total additional_expenses-value');
+const incomePeriod = document.getElementsByClassName('income_period-value');
+const targetMonth = document.getElementsByClassName('target_month-value');
+const sum = document.querySelector('.salary-amount');
+const incomeTitle = document.querySelector('.income-title');
+const icomeAmount = document.querySelector('.income-amount');
+const expsTitle = document.querySelector('.expenses-title');
+const expsAmount = document.querySelector('.expenses-amount');
+const targetAmount = document.querySelector('.target-amount');
+
 const isNumber = function(n) {
   return !isNaN(parseFloat(n)) && isFinite(n);
 }

@@ -166,3 +166,9 @@ console.log("Расходы за месяц: ", appData.expensesMonth)
 for (let key in appData){
   console.log("Наша программа включает в себя данные: Ключ= " + key + "Значение= " + appData[key]);
 }
+
+function capitalize(input) {  
+  return input.toString().toLowerCase().split(' ').map(s => s.charAt(0).toUpperCase() + s.substring(1)).join(' ');  
+}  
+
+console.log(capitalize(appData.addExpenses));

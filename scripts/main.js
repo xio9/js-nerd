@@ -96,6 +96,9 @@ let appData = {
       item.disabled = false;
       item.value = '';
     });
+    document.querySelectorAll('.result-total').forEach(function(item){
+      item.disabled = true;
+    });
     periodSelect.disabled = false;
   },
   cancel: function(){

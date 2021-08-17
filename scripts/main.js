@@ -37,19 +37,21 @@ const isText = function(n){
 
 let expenses = [];
 
-const AppData = function(){
-  this.budget = 0;
-  this.budgetDay = 0; 
-  this.budgetMonth = 0;
-  this.expensesMonth = 0;
-  this.income = {};
-  this.incomeMonth = 0;
-  this.addIncome = [];
-  this.expenses = {};
-  this.addExpenses = [];
-  this.deposit = false;
-  this.percentDeposit = 0;
-  this.moneyDeposit = 0;
+class AppData{
+  constructor(){
+    this.budget = 0;
+    this.budgetDay = 0; 
+    this.budgetMonth = 0;
+    this.expensesMonth = 0;
+    this.income = {};
+    this.incomeMonth = 0;
+    this.addIncome = [];
+    this.expenses = {};
+    this.addExpenses = [];
+    this.deposit = false;
+    this.percentDeposit = 0;
+    this.moneyDeposit = 0;
+  }
 };
 
 AppData.prototype.app = function(){
